@@ -5,9 +5,12 @@ int	ft_printf(const char *input, ...)
 	va_list	args;
 	int	i;
 
-	return (i);
+	i = 0;
+	if (!input || *input == '\0')
+		return (0);
 	va_start (args, input);
 	va_end (args);
+	return (i);
 }
 
 #include <stdio.h>
