@@ -3,14 +3,14 @@
 int	ft_printf(const char *input, ...)
 {
 	va_list	args;
-	int	i;
+	int	res;
 
-	i = 0;
 	if (!input || *input == '\0')
 		return (0);
 	va_start (args, input);
+	res = ;
 	va_end (args);
-	return (i);
+	return (res);
 }
 
 #include <stdio.h>
