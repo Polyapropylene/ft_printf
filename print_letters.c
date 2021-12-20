@@ -1,5 +1,11 @@
 #include "ft_printf.h"
 
+int	print_char(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
+
 size_t	ft_strlen(const char *c)
 {
 	size_t	i;
