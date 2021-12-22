@@ -11,6 +11,8 @@ int	parse_format(va_list argp, char *format)
 			result += print_string(va_arg(argp, char *));
 		else if (*format == 'd' || *format == 'i')
 			result += print_number(va_arg(argp, int));
+		else if (*format == 'u')
+			result += print_unsigned_int(va_arg(argp, unsigned int));
 		else if (*format == '%')
 			result += print_char('%');
 	return (result);
@@ -30,10 +32,7 @@ int	ft_printf(const char *format, ...)
 	while (*format)
 	{
 		if (*format != '%')
-		{
 			res += write(1,format, 1);
-			format++;
-		}
 		if(*format == '%')
 		{
 			format++;
@@ -45,26 +44,26 @@ int	ft_printf(const char *format, ...)
 	return (res);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main()
 {
 	char	c;
 	char	*str;
-	int		i;
+	unsigned int		i;
 
 	c = 'b';
-	i = 1234;
+	i = 8948834;
 	str = "Hello world";
-	// printf("%c\n", c);
+	printf("%c\n", c);
 	ft_printf("%c\n", c);
-	// printf("%s\n", str);
-	// ft_printf("%s\n", str);
-	// printf("%d\n", i);
-	// ft_printf("%d\n", i);
+	printf("%s\n", str);
+	ft_printf("%s\n", str);
+	printf("%u\n", i);
+	ft_printf("%u\n", i);
 	// printf("%d%s\n", i, str);
 	// ft_printf("%d%s\n", i, str);
-	// printf("%%\n");
-	// ft_printf("%%\n");
+	printf("%%\n");
+	ft_printf("%%\n");
 
-}
+}*/

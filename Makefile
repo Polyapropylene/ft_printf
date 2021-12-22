@@ -6,13 +6,15 @@
 #    By: rrhyhorn <rrhyhorn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 18:58:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/12/09 18:46:38 by rrhyhorn         ###   ########.fr        #
+#    Updated: 2021/12/22 21:21:43 by rrhyhorn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-LIST =		
+LIST =	ft_printf.c\
+		print_letters.c\
+		print_number.c
 
 OBJ = $(patsubst %.c, %.o, $(LIST))
 

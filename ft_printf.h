@@ -14,4 +14,6 @@ int	print_char(char c);
 
 int	print_number(int n);
 
+int	print_unsigned_int(unsigned int n);
+
 #endif

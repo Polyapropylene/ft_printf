@@ -40,3 +40,18 @@ int	print_number(int n)
 		 write(1, &c, 1);
 	return (count_num(n));
 }
+
+int	print_unsigned_int(unsigned int n)
+{
+	char	c;
+
+	c = n + '0';
+	 if (n >= 10)
+	{
+		 print_number(n / 10);
+		 print_number(n % 10);
+	}
+	 else
+		 write(1, &c, 1);
+	return (count_num(n));
+}
