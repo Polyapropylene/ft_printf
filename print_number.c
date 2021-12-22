@@ -18,6 +18,9 @@ int	count_num(int n)
 
 int	print_number(int n)
 {
+	char	c;
+
+	c = n + '0';
 	if (n == -2147483648)
 	{
 		write(1, "-2147483648", 11);
@@ -26,7 +29,7 @@ int	print_number(int n)
 	if (n < 0)
 	{
 		 n = -n;
-		 print_number('-');
+		 write(1, "-", 1);
 	}
 	 if (n >= 10)
 	{
@@ -34,6 +37,6 @@ int	print_number(int n)
 		 print_number(n % 10);
 	}
 	 else
-		 print_number(n + '0');
+		 write(1, &c, 1);
 	return (count_num(n));
 }

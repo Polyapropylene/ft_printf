@@ -6,20 +6,20 @@ int	print_char(char c)
 	return (1);
 }
 
-size_t	ft_strlen(const char *c)
-{
-	size_t	i;
-
-	i = 0;
-	while (c[i])
-		i++;
-	return (i);
-}
-
 int	print_string(char *s)
 {
-	if (s == NULL)
-		return (0);
-	write(1, s, ft_strlen(s));
-	return (ft_strlen(s));
+	int	i;
+
+	i = 0;
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (*s)
+	{
+		write(1, s++, 1);
+		i++;
+	}
+	return (i);
 }

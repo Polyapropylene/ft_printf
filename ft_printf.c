@@ -7,11 +7,11 @@ int	parse_format(va_list argp, char *format)
 	result = 0;
 		if (*format == 'c')
 			result += print_char(va_arg(argp, int));
-		if (*format == 's')
+		else if (*format == 's')
 			result += print_string(va_arg(argp, char *));
-		if (*format == 'd' || *format == 'i')
+		else if (*format == 'd' || *format == 'i')
 			result += print_number(va_arg(argp, int));
-		if (*format == '%')
+		else if (*format == '%')
 			result += print_char('%');
 	return (result);
 }
@@ -39,6 +39,7 @@ int	ft_printf(const char *format, ...)
 			format++;
 			res += parse_format(argp, (char *)format);
 		}
+		format++;
 	}
 	va_end (argp);
 	return (res);
@@ -49,21 +50,21 @@ int	ft_printf(const char *format, ...)
 int	main()
 {
 	char	c;
-	// char	*str;
+	char	*str;
 	int		i;
 
 	c = 'b';
 	i = 1234;
-	// str = 'Hello world';
-	printf("%c\n", c);
+	str = "Hello world";
+	// printf("%c\n", c);
 	ft_printf("%c\n", c);
 	// printf("%s\n", str);
 	// ft_printf("%s\n", str);
 	// printf("%d\n", i);
-	ft_printf("%d\n", i);
+	// ft_printf("%d\n", i);
 	// printf("%d%s\n", i, str);
 	// ft_printf("%d%s\n", i, str);
-	printf("%%\n");
-	ft_printf("%%\n");
+	// printf("%%\n");
+	// ft_printf("%%\n");
 
 }
