@@ -1,4 +1,5 @@
 #include "ft_printf.h"
+#include <limits.h>
 
 int	parse_format(va_list argp, char *format)
 {
@@ -44,26 +45,26 @@ int	ft_printf(const char *format, ...)
 	return (res);
 }
 
-/*#include <stdio.h>
+#include <stdio.h>
 
 int	main()
 {
-	char	c;
-	char	*str;
-	unsigned int		i;
+	// char	c;
+	// char	*str;
+	// unsigned int		i;
 
-	c = 'b';
-	i = 8948834;
-	str = "Hello world";
-	printf("%c\n", c);
-	ft_printf("%c\n", c);
-	printf("%s\n", str);
-	ft_printf("%s\n", str);
-	printf("%u\n", i);
-	ft_printf("%u\n", i);
+	// c = 'b';
+	// i = 8948834;
+	// str = "Hello world";
+	// printf("%c\n", c);
+	// ft_printf("%c\n", c);
+	printf(" %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	ft_printf(" %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	// printf("%u\n", i);
+	// ft_printf("%u\n", i);
 	// printf("%d%s\n", i, str);
 	// ft_printf("%d%s\n", i, str);
-	printf("%%\n");
-	ft_printf("%%\n");
+	// printf("%%\n");
+	// ft_printf("%%\n");
 
-}*/
+}
