@@ -61,12 +61,27 @@ char	*ft_utoa(unsigned int n)
 	char	*str;
 	int		i;
 
-	i = count_num(n);
+	// i = count_num(n);
 	if (n == 0)
 		return (ft_strdup("0"));
-	str = (char *)malloc(sizeof(char) * (i + 1));
-	if (!str)
-		return (NULL);
-	str = int_to_char(n, str);
+	// str = (char *)malloc(sizeof(char) * (i + 1));
+	// if (!str)
+		// return (NULL);
+	if (n < 0)
+	{
+		i = count_num(4294967295 + n);
+		str = (char *)malloc(sizeof(char) * (i + 1));
+		if (!str)
+			return (NULL);
+		str = int_to_char(4294967295 + n, str);
+	}
+	if (n >= 0)
+	{
+		i = count_num(n);
+		str = (char *)malloc(sizeof(char) * (i + 1));
+		if (!str)
+			return (NULL);
+		str = int_to_char(n, str);
+	}
 	return (str);
 }

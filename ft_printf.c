@@ -14,6 +14,10 @@ int	parse_format(va_list argp, char *format)
 			result += print_number(va_arg(argp, int));
 		else if (*format == 'u')
 			result += print_unsigned_int(va_arg(argp, unsigned int));
+		else if (*format == 'x')
+			result += print_x(va_arg(argp, unsigned long long));
+		else if (*format == 'X')
+			result += print_X(va_arg(argp, unsigned long long));
 		else if (*format == '%')
 			result += print_char('%');
 	return (result);
@@ -56,12 +60,12 @@ int	main()
 	// c = 'b';
 	// i = 8948834;
 	// str = "Hello world";
-	// printf("%c\n", c);
-	// ft_printf("%c\n", c);
-	printf(" %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
-	ft_printf(" %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
-	// printf("%u\n", i);
-	// ft_printf("%u\n", i);
+	printf(" %x ", 16);
+	ft_printf(" %x \n", 13);
+	// printf(" %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	// ft_printf(" %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	printf("%u\n", -145656);
+	ft_printf("%u\n", -145656);
 	// printf("%d%s\n", i, str);
 	// ft_printf("%d%s\n", i, str);
 	// printf("%%\n");

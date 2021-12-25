@@ -16,6 +16,10 @@ int		print_number(long n);
 
 int		print_unsigned_int(unsigned long n);
 
+int		print_x(unsigned long long i);
+
+int		print_X(unsigned long long i);
+
 char	*ft_itoa(int n);
 
 char	*ft_utoa(unsigned int n);
