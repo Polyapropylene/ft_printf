@@ -15,9 +15,9 @@ int	parse_format(va_list argp, char *format)
 		else if (*format == 'u')
 			result += print_unsigned_int(va_arg(argp, unsigned int));
 		else if (*format == 'x')
-			result += print_x(va_arg(argp, unsigned long long));
+			result += print_x(va_arg(argp, unsigned long int));
 		else if (*format == 'X')
-			result += print_X(va_arg(argp, unsigned long long));
+			result += print_X(va_arg(argp, unsigned long int));
 		else if (*format == '%')
 			result += print_char('%');
 	return (result);
@@ -60,9 +60,9 @@ int	main()
 	// c = 'b';
 	// i = 8948834;
 	// str = "Hello world";
-	printf(" %x ", 16);
-	ft_printf(" %x \n", 13);
-	// printf(" %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	printf(" %lx \n", 4294967295);
+	ft_printf(" %lx \n", 4294967295);
+	// printf(" %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, UOLNG_MAX, 0, -42);
 	// ft_printf(" %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
 	printf("%u\n", -145656);
 	ft_printf("%u\n", -145656);
