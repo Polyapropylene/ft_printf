@@ -27,3 +27,32 @@ size_t	ft_strlen(const char *c)
 		i++;
 	return (i);
 }
+
+int	count_unsigned_num(unsigned long long n, int base)
+{
+	int	i;
+
+	i = 0;
+	while (n)
+	{
+		i++;
+		n = n / base;
+	}
+	return (i);
+}
+
+int	count_num(int n, int base)
+{
+	int	i;
+
+	if (n <= 0)
+		i = 1;
+	if (n > 0)
+		i = 0;
+	while (n != 0)
+	{
+		n = n / base;
+		i++;
+	}
+	return (i);
+}
