@@ -17,9 +17,9 @@ int	print_unsigned_int(unsigned int n)
 	char	*str;
 	int		i;
 
-	//i = 0;
+	i = 0;
 	str = ft_utoa_base(n, 10);
-	i = print_string(str);
+	i += print_string(str);
 	free(str);
 	return (i);
 }

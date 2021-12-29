@@ -44,10 +44,10 @@ static char	*uns_int_to_char(unsigned long long n, char *str, int base, int i)
 {
 	str[i] = '\0';
 	i--;
-	while(n)
+	while (n)
 	{
 		if ((n % base) >= 10)
-			str[i] = ((n % 10) - 10) + 'a';
+			str[i] = (n % 10) + 87;
 		else
 			str[i] = n % 10 + '0';
 		n = n / base;
@@ -61,13 +61,12 @@ char	*ft_utoa_base(unsigned long long n, int base)
 	char	*str;
 	int		i;
 
-	 //if (n < 0)
-	//	 n = 4294967295 + n;
-	i = count_num(n, base);
+	i = count_unsigned_num(n, base);
 	if (n == 0)
 		return (ft_strdup("0"));
 	str = (char *)malloc(sizeof(char) * (i + 1));
 	if (!str)
 		return (NULL);
-	return (uns_int_to_char(n, str, base, i));
+	str = uns_int_to_char(n, str, base, i);
+	return (str);
 }

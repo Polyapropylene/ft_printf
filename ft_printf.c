@@ -51,7 +51,7 @@ int	ft_printf(const char *format, ...)
 
 #include <stdio.h>
 
-int	main()
+/*int	main()
 
 {
 	// char	c;
@@ -65,10 +65,10 @@ int	main()
 	// ft_printf(" %lx \n", 4294967295);
 	// printf(" %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, UOLNG_MAX, 0, -42);
 	// ft_printf(" %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
-	printf("%u\n", -1000);
-	ft_printf("%u\n", -1000);
-	// printf("%d%s\n", i, str);
-	// ft_printf("%d%s\n", i, str);
+	// printf("%u\n", -1000);
+	// ft_printf("%u\n", -1000);
+	printf(" %c %c %c \n", '2', '1', 0);
+	ft_printf(" %c %c %c \n", '2', '1', 0);
 	// printf("%%\n");
 	// ft_printf("%%\n")
-}
+}*/
