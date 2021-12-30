@@ -3,18 +3,18 @@
   "configurations": [
     {
       "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
+      "type": "lldb",
       "request": "launch",
       "args": [
         ""
       ],
       "stopAtEntry": true,
-      "cwd": "/Users/rrhyhorn/Desktop/ft_printf",
+      "cwd": "/Users/polechkagadukina/Desktop/ft_pintf",
       "environment": [],
-      "program": "/Users/rrhyhorn/Desktop/ft_printf/build/Debug/outDebug",
+      "program": "/Users/polechkagadukina/Desktop/ft_pintf/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "lldb",
-      "externalConsole": true
+      "externalConsole": false
     }
   ]
 }
