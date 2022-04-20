@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rrhyhorn <rrhyhorn@student.42.fr>          +#+  +:+       +#+         #
+#    By: rrhyhorn <rrhyhorn@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/08 18:58:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/12/30 19:40:08 by rrhyhorn         ###   ########.fr        #
+#    Created: 2021/10/08 18:58:28 by rrhyhorn          #+#    #+#              #
+#    Updated: 2022/04/20 14:43:19 by rrhyhorn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
